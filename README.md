@@ -1,6 +1,6 @@
 # MAPS Archive-CSV
 
-The Maine-Aomori Printmaking Society is a transnational collection of prints celebrating the Maine-Aomori sister-state relationship.
+The Maine-Aomori Printmaking Society, or MAPS, is a transnational collection of prints celebrating the Maine-Aomori sister-state relationship. This repository houses prints from the five years of MAPS' run.
 
 ## Brief Overview of Building a Collection
 
