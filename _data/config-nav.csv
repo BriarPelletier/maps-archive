@@ -1,6 +1,13 @@
 display_name,stub,dropdown_parent
 Home,/,
 Browse,/browse.html,
+Galleries,
+2020,/galleries/2020.html,Galleries
+2019,/galleries/2019.html,Galleries
+2018,/galleries/2018.html,Galleries
+2017,/galleries/2017.html,Galleries
+2016,/galleries/2016.html,Galleries
+2015,/galleries/2015.html,Galleries
 Subjects,/subjects.html,
 Map,/map.html,
 Timeline,/timeline.html,
