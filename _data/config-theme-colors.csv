@@ -1,8 +1,8 @@
 color_class,color
-primary,#FF512B,color: white;
+primary,#FF754A
 secondary,
-success,#FF512B
-info,#FF512B
+success,#FF754A
+info,#FF754A
 warning,
 danger,
 light,
