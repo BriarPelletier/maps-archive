@@ -2,7 +2,7 @@ color_class,color
 primary,
 secondary,#FF512B
 success,#FF512B
-info,
+info,#FF512B
 warning,
 danger,
 light,
