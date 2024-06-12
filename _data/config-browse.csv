@@ -1,6 +1,7 @@
 field,display_name,btn,hidden,sort_name
 artist,Artist,,,
-date,Date,,,Date
+medium,Medium,,,
+acquisition,Acquisition,,,
 subject,,true
 location,,true
 identifier,,,true,Identifier
