@@ -5,14 +5,14 @@ layout: page
 {%- assign items = site.data[site.metadata] | where_exp: 'item','item.objectid' -%}
 <div class="row">
 
-  <div class="col-md-8">
-
-    {% include feature/image.html objectid="01-seki" %}
-    {% include index/description.html %}
-    {% include index/carousel.html title="Explore the Collection" %}
-    
   </div>
-  <div class="col-md-4">  
+  <div class="col-md-12">
+
+  </div>
+  <div class="col-md-12">{% include feature/timelinejs.html %}
+
+    </div>
+  <div class="col-md-3">  
 
     {% include index/time.html %}
 
