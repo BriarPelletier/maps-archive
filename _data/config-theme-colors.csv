@@ -1,4 +1,4 @@
-color_class,#FF754A
+color_class,color
 primary,#FF754A
 secondary,
 success,#FF754A
@@ -6,4 +6,4 @@ info,#FF754A
 warning,
 danger,
 light,
-dark,
+dark,#FF754A
