@@ -4,6 +4,6 @@ secondary,
 success,#FF754A
 info,#FF754A
 warning,
-danger,
+danger,#FF754A
 light,#FF754A
 dark,
