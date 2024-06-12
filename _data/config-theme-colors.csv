@@ -1,5 +1,5 @@
 color_class,color
-primary,#FF512B
+primary,#FF512B,color: white;
 secondary,
 success,#FF512B
 info,#FF512B
