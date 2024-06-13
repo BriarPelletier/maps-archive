@@ -10,22 +10,18 @@ credits: true
 
 {% include feature/jumbotron.html objectid="01-seki" %} 
 
-{% include feature/nav-menu.html sections="About CollectionBuilder CSV;About the About Page" %}
+{% include feature/nav-menu.html sections="About MAPS;About Friends of Aomori" %}
+## About MAPS
 
-## About CollectionBuilder CSV
+The Maine-Aomori Printmaking Society (MAPS) was a transnational printmaking exchange program between Maine and Aomori. 
 
-This demo collection features items from the University of Idaho Library's [Digital Collections](https://www.lib.uidaho.edu/digital/), and is build using [CollectionBuilder-CSV](https://github.com/CollectionBuilder/collectionbuilder-csv).
+Running from 2015 through 2020, MAPS celebrated the Maine-Aomori Sister-State relationship through the exchange of prints by professional artists who live, work, or have a deep connection with the Maine and/or Aomori regions. 
 
-CollectionBuilder-CSV is a "Stand Alone" template for creating digital collection and exhibit websites using Jekyll, given:
+Every year, 20 prints by 20 artists were exchanged and exhibited in venues across Maine and Aomori. Artist delegations and artist residencies in both Maine and Aomori were realized as the program progressed. 
 
-- a CSV of collection metadata
-- a folder of images, PDFs, audio, or video files
+The MAPS program was volunteer-led and community-built, supported by the Munakata Shikō Museum of Art in Aomori City, Japan, and its Director, Jiro Ono; MAPS Program Coordinator Jeff Badger, Pickwick Press in Portland, Maine; Board Members of Friends of Aomori, based in Portland, Maine; The Consulate-General of Japan in Boston, University of Southern Maine student interns, and local vendors, venues, and community spaces where MAPS and its story were shared with the public.
 
-Driven by your collection metadata, the template generates engaging visualizations to browse and explore your objects.
-The resulting static site can be hosted on any basic web server.
-
-[CollectionBuilder](https://github.com/CollectionBuilder/) is an set of open source tools for creating digital collection and exhibit websites that are driven by metadata and powered by modern static web technology.
-See [CB Docs](https://collectionbuilder.github.io/cb-docs/) for detailed information.
+Although MAPS has concluded its five-year run, a childrens' printmaking exchange was founded under the MAPS program in 2018 by Briar Pelletier of Friends of Aomori. The program evolved into an annual program under the name Hashi - or "bridge" in Japanese - under Maine educator Reaghan Russell. The Hashi program features student prints from elementary and middle school students in Maine and Aomori schools. Hashi is currently run by Lynn McCann-Olson, current President of Friends of Aomori.
 
 {% include feature/image.html objectid="01-pixley" width="75" %} 
 
