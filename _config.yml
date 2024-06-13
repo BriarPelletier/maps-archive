@@ -18,14 +18,14 @@ source-code: https://github.com/CollectionBuilder/collectionbuilder-csv
 # SITE SETTINGS
 #
 # title of site appears in banner
-title: The Maine Aomori Printmaking Society
+title: The Maine-Aomori Printmaking Society
 # tagline, a short phrase that will appear throughout the site in the top banner
 tagline: Online Archive & Repository
 # description appears in meta tags and other locations
 # this description might appear in search result lists, keep around 160 characters max
 description: "Acquisitions of the MAPS Art Exchange Program from 2015-2020."
 # keywords, a short list of subjects describing the collection, separated by semicolon, to appear in rich markup
-keywords: idaho;history;inland northwest
+keywords: maine;aomori;printmaking;art;exchange;sister;state
 # creator of the digital collection, to appear in meta tags; we typically use our GitHub usernames but feel free to just use your name
 author: Friends of Aomori
 
@@ -52,8 +52,8 @@ metadata: mapsarchive-metadata1
 #
 organization-name: "Friends of Aomori"
 organization-link: https://maine-aomori.org/
-organization-logo-banner: https://cdil.lib.uidaho.edu/storying-extinction/assets/img/cdil.png
-organization-logo-nav: https://cdil.lib.uidaho.edu/assets/img/logo.png
+organization-logo-banner: /objects/maps-logo2.png
+organization-logo-nav: /objects/maps-hanko.png
 
 ##########
 # ROBOTS EXCLUDE

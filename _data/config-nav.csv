@@ -1,5 +1,6 @@
 display_name,stub,dropdown_parent
 Home,/,
+About,/about.html,
 Galleries,
 2015,/galleries/2015.html,Galleries
 2016,/galleries/2016.html,Galleries
@@ -7,8 +8,8 @@ Galleries,
 2018,/galleries/2018.html,Galleries
 2019,/galleries/2019.html,Galleries
 2020,/galleries/2020.html,Galleries
+Residency,/galleries/residency.html,Galleries
 Browse,/browse.html,
 Subjects,/subjects.html,
 Map,/map.html,
 Data,/data.html,
-About,/about.html,

@@ -4,35 +4,36 @@ layout: page
 ---
 {%- assign items = site.data[site.metadata] | where_exp: 'item','item.objectid' -%}
 
-    <div class="card mb-3" >
-      <div class="card-body">
+    <div class=row><div class="col mb-3" >
+      <div class="col-body">
         <a href="{{ '/galleries/2015.html' | relative_url }}" title="Browse the MAPS 2015 Collection">{% include feature/jumbotron.html objectid="/objects/01-yagihashi.jpg" heading="MAPS 2015" text=false %}</a>
       </div>
     </div>
 
-    <div class="card mb-3" >
-      <div class="card-body">
+    <div class="col mb-3" >
+      <div class="col-body">
         <a href="{{ '/galleries/2016.html' | relative_url }}" title="Browse the MAPS 2016 Collection">{% include feature/jumbotron.html objectid="/objects/02-muroya.jpg" heading="MAPS 2016" text=false %}</a>
       </div>
     </div> 
 
-    <div class="card mb-3" >
-      <div class="card-body">
+    <div class="col mb-3" >
+      <div class="col-body">
         <a href="{{ '/galleries/2017.html' | relative_url }}" title="Browse the MAPS 2017 Collection">{% include feature/jumbotron.html objectid="/objects/03-badger.jpg" heading="MAPS 2017" text=false %}</a>
       </div>
     </div> 
 
-    <div class="card mb-3" >
-      <div class="card-body">
+    <div class="col mb-3" >
+      <div class="col-body">
         <a href="{{ '/galleries/2018.html' | relative_url }}" title="Browse the MAPS 2018 Collection">{% include feature/jumbotron.html objectid="/objects/04-shimazu.jpg" heading="MAPS 2018" text=false %}</a>
       </div>
     </div> 
 
-    <div class="card mb-3" >
-      <div class="card-body">
-        <a href="{{ '/galleries/2019.html' | relative_url }}" title="Browse the MAPS 2019 Collection">{% include feature/jumbotron.html objectid="/objects/05-kikuchi.jpg" heading="MAPS 2019" text=false %}</a>
+    <div class="col mb-3" >
+      <div class="col-body">
+        <a href="{{ '/galleries/2019.html' | relative_url }}" title="Browse the MAPS 2019 Collection">{% include feature/jumbotron.html objectid="/objects/05-harmon.jpg" heading="MAPS 2019" text=false %}</a>
       </div>
     </div> 
+  </div>
 
   <div class="">
 

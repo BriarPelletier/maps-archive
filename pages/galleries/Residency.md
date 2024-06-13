@@ -1,6 +1,6 @@
 ---
-title: Prints from Residencies
+title: Prints from Residency
 layout: gallery
-permalink: /galleries/residencies.html
-filter: item.date contains 'residency'
+permalink: /galleries/residency.html
+filter: item.subject contains 'residency'
 ---
