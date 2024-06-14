@@ -1,5 +1,6 @@
 
 {%- assign items = site.data.maps-venues | where_exp: 'item','item.latitude != nil and item.longitude != nil' -%}
+{%- assign prints = site.data[site.metadata] | where_exp: 'item','item.objectid' -%}
 {%- assign fields = site.data.config-map -%}
 <!-- load leaflet dependencies -->
 <script src="{{ '/assets/lib/leaflet/leaflet.js' | relative_url }}"></script>
@@ -21,7 +22,8 @@
         {% if item.display_template %}"template": {{ item.display_template | escape | jsonify }}, {%- endif -%}
         {% if item.format %}"format": {{ item.format | escape | jsonify }}, {%- endif -%}
         {% if item.image_alt_text %}"alt": {{ item.image_alt_text | escape | jsonify }}, {%- endif -%}
-        "prints": {{ item.related_items | jsonify }},
+        "related": [ {% assign relatedPrints = item.related_items | split: ';' %}{% for r in relatedPrints %}{% assign print = prints | where: 'objectid', r | first %}
+                        { "title": {{ print.title | jsonify }}, "id": {{ r | jsonify }} }{% unless forloop.last %}, {% endunless %}{% endfor %} ],
         "title": {{ item.title | escape | jsonify }},
         "id": {{ item.objectid | jsonify }} 
     } }{% unless forloop.last %}, {% endunless %}{% endfor %}
@@ -105,34 +107,29 @@
         {% if site.data.theme.map-search == true %}, removeOutsideVisibleBounds: false{% endif %} 
     });{% endif %}
 
-    /* get icons function */ 
-    {% include js/get-icon.js %}
-
     /* object popup function */
     function objectPopups(feature, layer) {
         {% if site.data.theme.map-search == true %}/* bind feature for search */
         feature.layer = layer;{% endif %}
-        // find item link
-        var itemHref = `{{ '/items/' | relative_url }}${ feature.properties.parent ? feature.properties.parent + ".html#" + feature.properties.id : feature.properties.id + ".html"}`;
-        // find image
-        var imgAlt = feature.properties.alt ? feature.properties.alt : feature.properties.title;
-        var thumbImg;
-        if (feature.properties.img) {
-            thumbImg = '<img class="map-thumb" src="' + feature.properties.img + '" alt="' + imgAlt + '">';
-        } else {
-            thumbImg = getIcon(feature.properties.template,feature.properties.format,"thumb")
-        }
+        
         // set up popup content
-        var popupTemplate = '<h2 class="h4"><a class="text-dark" href="' + itemHref + '">' +
-            feature.properties.title + '</a></h2><div class="text-center"><a href="' + itemHref + 
-            '" >' + thumbImg + '</a></div><p>';
+        var popupTemplate = '<h2 class="h3">' +
+            feature.properties.title + '</h2><p>';
         {% for f in fields %}{% if f.display_name %}
         if (feature.properties[{{ f.field | escape | jsonify }}]) {
             popupTemplate += '<strong>{{ f.display_name }}:</strong> ' + feature.properties[{{ f.field | escape | jsonify }}] + '<br>'; 
         }
         {% endif %}{% endfor %}
-        popupTemplate += '</p><div class="text-center"><a class="btn btn-light" href="' + itemHref + '" >View Item</a></div>';
-        layer.bindPopup(popupTemplate);
+        popupTemplate += '</p><h3 class="h6">Featured Items:</h3><p>';
+        if (feature.properties.related) {
+            for (let i = 0; i < feature.properties.related.length; i++) {
+                var printLink = "{{ '/items/' | relative_url }}" + feature.properties.related[i].id + ".html";
+                popupTemplate += '<a class="btn btn-sm btn-outline-secondary m-1" href="' + printLink + '" >' + feature.properties.related[i].title + '</a>';
+            } 
+        }
+        popupTemplate += '</p>';
+            
+        layer.bindPopup(popupTemplate, { maxWidth: 800 });
     }
     function objectMarkers(feature,latlng) {
         var marker = L.marker(latlng, {alt: feature.properties.title});
